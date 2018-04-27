@@ -2,7 +2,7 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
+
 @import "bootstrap";
 
 body{
@@ -15,7 +15,7 @@ h1{
 }
 /*form*/
 
-input, textarea, select, .uneditable-input {
+input, textarea, select {
   border: 1px solid #bbb;
   border-radius: 2px;
   width: 100%;
@@ -29,12 +29,23 @@ input, textarea, select, .uneditable-input {
   }
 }
 
-
-
 form{
-	border: none;
+  margin-top: 50px;
+  margin-bottom: 40px;
+	border: 1px solid #dee2e6;
 	border-radius: 5px;
 	padding: 20px;
-	background-color: #f5f5f0;
+	background-color: #f8f9fa;
 }
 
+.field_with_errors input{
+border-color: #d01612;
+}
+
+/* home */
+
+.hello{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}

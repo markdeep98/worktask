@@ -1,3 +1,11 @@
 <% provide(:title, "Home") %>
-<h1>Home page</h1>
-<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<div class="container">
+	<div class="row">
+			<div class="col-sm-8 mx-auto hello">
+				<h1>Hello</h1>
+				<h2><%= link_to "Sign In", login_path, class: "btn btn-outline-primary btn-lg my-10 my-sm-0 " %> to ask a question</h2>
+				<h5>Don't have account ? <%= link_to "Sign Up", signup_path %> right now</h5>
+			</div>
+	</div>
+</div>
+

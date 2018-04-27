@@ -1,8 +1,10 @@
 <% provide(:title, 'Sign up') %>
 <div class="container signup">
 	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
+		<div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
 			<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages' %>
+
 			<%= f.label :name %>
 			<div class="form-group">
 				<%= f.text_field :name %>

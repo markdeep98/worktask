@@ -1,0 +1,21 @@
+<% provide(:title, "Log in") %>
+<div class="container login">
+	<div class="row">
+		<div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+			<%= form_for(:session, url: login_path) do |f| %>
+
+			<%= f.label :email %>
+			<div class="form-group">
+				<%= f.email_field :email%>
+			</div>
+
+			<%= f.label :password %>
+			<div class="form-group">
+				<%= f.password_field :password %>
+			</div>
+
+			<%= f.submit "Log in", class: "btn btn-primary" %>
+			<% end %>
+		</div>
+	</div>
+</div>
