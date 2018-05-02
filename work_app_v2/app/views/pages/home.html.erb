@@ -1,4 +1,26 @@
 <% provide(:title, "Home") %>
+<% if logged_in? %>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 mx-auto">
+			<section class="user_info">
+		   		<%= render 'shared/user_info' %>
+		    </section>
+		    <section class="micropost_form">
+		    	<%= render 'shared/micropost_form' %>
+		    </section>
+		    <div class="col-md-8">
+		    <% if @user.microposts.any? %>
+		       <h3>Questions (<%= @user.microposts.count %>)</h3>
+		       <ol class="microposts">
+		       		<%= render 'shared/feed' %>
+		       </ol>
+		    <% end %>
+		</div> 
+		</div>
+	</div>
+</div>
+<% else %>
 <div class="container">
 	<div class="row">
 			<div class="col-sm-8 mx-auto hello">
@@ -8,4 +30,4 @@
 			</div>
 	</div>
 </div>
-
+<% end %>
