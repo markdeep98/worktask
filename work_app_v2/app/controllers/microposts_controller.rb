@@ -8,15 +8,16 @@ class MicropostsController < ApplicationController
 			flash[:success] = "Question created"
 			redirect_to root_url
 		else
+			flash[:danger] = "Ask a question please"
 			@feed_items = []
-			render 'pages/home'
+			redirect_to root_url
 		end
 	end
 
 	def destroy
 		@micropost.destroy
-		flash[:success] = "Micropost deleted"
-		redirect_to request.referrer || root_url
+		flash[:success] = "Question deleted"
+		redirect_to request.referrer || root_url #перенаправить на предыдущую стр. или на главную
 	end
 
 	private

@@ -1,13 +1,12 @@
 <% provide(:title, "Edit") %>
 
-
 <div class="container signup">
 	<div class="row">
 		<div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
 			<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages', object: f.object %>
 			<h3>Edit User</h3>
-			
+			<hr>
 			<%= f.label :name %>
 			<div class="form-group">
 				<%= f.text_field :name %>
@@ -28,7 +27,7 @@
 				<%= f.password_field :password_confirmation %>
 			</div>
 
-			<%= f.submit "Update", class: "btn btn-primary" %> or <%= link_to "Cancel", root_path %>
+			<%= f.submit "Update", class: "btn btn-primary" %> or  <%= link_to "Cancel", root_path %>
 			<% end %>
 		</div>
 	</div>
