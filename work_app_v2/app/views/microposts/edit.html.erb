@@ -1,0 +1,15 @@
+<% provide(:title, "Update") %>
+
+<div class="container signup">
+	<div class="row">
+		<div class="col-sm-10 col-md-8 col-lg-8 mx-auto">
+			<%= form_for(@micropost) do |f| %>
+			<%= f.label :content %>
+			<div class="form-group">
+				<%= f.text_field :content %>
+			</div>
+			<%= f.submit "Update", class: "btn btn-primary" %>
+			<% end %>
+		</div>
+	</div>
+</div>

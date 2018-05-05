@@ -8,6 +8,7 @@
 	  			<%= micropost.content %>
 		  			<% if current_user?(micropost.user) %>
 						<%= link_to "delete", micropost, method: :delete, data: { confirm: "You sure?" } %>
+						<%= link_to "update", edit_micropost_path(micropost)%>
 		    		<% end %>
 	  		</div>
 	  		<div class="col-sm-12 post_time">
