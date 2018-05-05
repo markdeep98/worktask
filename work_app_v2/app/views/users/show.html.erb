@@ -1,17 +1,19 @@
 <div class="user_page">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-2 col-sm-offset-2 user_name">
-				<%= @user.name %>
+			<div class="col-sm-8 user_name">
+				<%= @user.name %> <%= @user.surname %>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-2 col-sm-offset-2 user_email">
+			<div class="col-sm-8 user_email">
 				<%= @user.email %>
 			</div>
 		</div>
-		<div class="">
-		    	<%= render 'shared/all_posts' %>
+		<div class="row">
+			<div class="col-sm-8 user_email">
+				<%= @user.phone %>
+			</div>
 		</div>
 	</div>
 </div>

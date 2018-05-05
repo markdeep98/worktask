@@ -1,3 +1,10 @@
+<% if logged_in? %>
+	<div class="alert alert-danger">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+		</button>
+		Wrong address</div>
+<% else %>
 <% provide(:title, "Log in") %>
 <div class="container login">
 	<div class="row">
@@ -19,3 +26,4 @@
 		</div>
 	</div>
 </div>
+<% end %>

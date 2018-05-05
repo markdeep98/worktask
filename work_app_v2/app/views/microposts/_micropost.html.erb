@@ -1,10 +1,19 @@
-<li id="micropost-<%= micropost.id %>">
-
-  <div class="user"><%= link_to micropost.user.name, micropost.user %></div> 
-  <span class="content"><%= micropost.content %></span>
-  Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-  <% if current_user?(micropost.user) %>
-      <%= link_to "delete", micropost, method: :delete,
-                                       data: { confirm: "You sure?" } %>
-    <% end %>
-</li>
+<div id="micropost-<%= micropost.id %>">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 user">
+			  		<%= link_to micropost.user.name, micropost.user %>
+			</div> 
+	  		<div class="col-sm-12 content">
+	  			<%= micropost.content %>
+		  			<% if current_user?(micropost.user) %>
+						<%= link_to "delete", micropost, method: :delete, data: { confirm: "You sure?" } %>
+		    		<% end %>
+	  		</div>
+	  		<div class="col-sm-12 post_time">
+	  				Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+	  		</div>
+		</div>
+	</div>
+</div>
+<hr>

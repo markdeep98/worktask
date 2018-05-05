@@ -5,16 +5,29 @@
 		<div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
 			<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages', object: f.object %>
-			<h3>Edit User</h3>
+			<div class="edit_user">
+				<h3>Edit User</h3>
+			</div>
+			
 			<hr>
 			<%= f.label :name %>
 			<div class="form-group">
 				<%= f.text_field :name %>
 			</div>
+
+			<%= f.label :surname %>
+			<div class="form-group">
+				<%= f.text_field :surname %>
+			</div>
 		
 			<%= f.label :email %>
 			<div class="form-group">
 				<%= f.email_field :email%>
+			</div>
+
+			<%= f.label :phone %>
+			<div class="form-group">
+				<%= f.text_field :phone %>
 			</div>
 
 			<%= f.label :password %>

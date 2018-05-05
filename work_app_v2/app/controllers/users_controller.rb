@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   	def show
   		@user = User.find(params[:id])
       @microposts = Micropost.all
-      @feed_items = current_user.feed
+      @feed_items = current_user.feed.paginate(page: params[:page])
   	end
 
   	def new
@@ -57,6 +57,6 @@ class UsersController < ApplicationController
 
   	private
   		def user_params
-  			params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  			params.require(:user).permit(:name, :email, :phone, :surname, :password, :password_confirmation)
   		end
 end

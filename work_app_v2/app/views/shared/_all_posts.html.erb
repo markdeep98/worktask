@@ -1,5 +1,7 @@
 <% if @microposts.any? %>
+<%= will_paginate @microposts, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
   <ol class="microposts">
     <%= render @microposts %>
   </ol>
+    <%= will_paginate @microposts, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
 <% end %>
